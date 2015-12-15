@@ -8,12 +8,12 @@
     "url": "git://github.com/Georgette/fastlane-register-devices.git"
   },
   "keywords": [
-      "ios",
-      "fastlane",
-      "UDID",
-      "register",
-      "devices",
-      "wrapper"
+    "ios",
+    "fastlane",
+    "UDID",
+    "register",
+    "devices",
+    "wrapper"
   ],
   "license": "MIT",
   "bugs": {
@@ -30,12 +30,13 @@
     "faucet": "0.0.1",
     "istanbul": "~0.4.0",
     "opn": "~1.0.2",
+    "proxyquire": "^1.7.3",
+    "sinon": "^1.17.2",
     "snazzy": "~2.0.1",
     "tape": "~4.2.1"
   },
-  "engineStrict" : true,
   "engines": {
-     "node": ">=4.0"
+    "node": ">=4.0"
   },
   "scripts": {
     "test": "npm run -s faucet && npm run -s lint && npm run -s check-cover",
@@ -49,5 +50,10 @@
     "check-cover": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100 2>&1 | grep ERROR: ; (test ${PIPESTATUS[0]} -eq 0) || (istanbul report text; exit 1)",
     "view-cover": "istanbul report text",
     "open-cover": "open coverage/lcov-report/index.html"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "remove": "^0.1.5",
+    "uuid": "^2.0.1"
   }
 }
