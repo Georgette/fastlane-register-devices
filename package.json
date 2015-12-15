@@ -1,6 +1,6 @@
 {
   "name": "fastlane-register-devices",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "node wrapper for ruby fastlane register devices functionality",
   "main": "index.js",
   "repository": {
